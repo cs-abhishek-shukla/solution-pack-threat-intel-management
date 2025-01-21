@@ -47,7 +47,7 @@ The *Feed Ingested* dashboard component reflects statistics for Threat Intel Fee
 
 Using a wide variety of feed integrations that are available on the **Content Hub**, you can seamlessly ingest feeds and get a normalized and aggregated view of the feeds on the **Threat Feeds** tab:  
 
-![Threat Feeds tab](res/threat-feeds.png)
+![Threat Feeds tab](res/threat-feeds.png) <!-- Change Screenshot -->
 
 The Threat Feeds solution is well-architected to handle scale at one end and effectively manage feeds at the other. You can manage feeds with the help of parameters such as feed sources, their confidence, TLPs, expiry, etc.
 
