@@ -47,7 +47,7 @@ The *Feed Ingested* dashboard component reflects statistics for Threat Intel Fee
 
 Using a wide variety of feed integrations that are available on the **Content Hub**, you can seamlessly ingest feeds and get a normalized and aggregated view of the feeds on the **Threat Feeds** tab:  
 
-![Threat Feeds tab](res/threat-feeds.png) <!-- Change Screenshot -->
+![Threat Feeds tab](res/threat-feeds.png)
 
 The Threat Feeds solution is well-architected to handle scale at one end and effectively manage feeds at the other. You can manage feeds with the help of parameters such as feed sources, their confidence, TLPs, expiry, etc.
 
@@ -57,7 +57,7 @@ The noise associated with the feeds is the main hurdle to managing feeds and der
 
 For example, let's look at the COVID-related feeds dataset. In the COVID-related feeds, you can apply the first-level filtration by choosing some tags that are of interest and also specifying a confidence level of over 60. This filtration would eliminate those feeds that do not contain the specified tag and whose confidence level is lower than 60, thereby helping to eliminate some of the noise:
 
-![Threat Feeds- Defining datasets](res/threat-feeds-dataset-covid.png)
+![Threat Feeds - Defining datasets](res/threat-feeds-dataset-covid.png)
 
 Similarly, you can create multiple datasets based on your goals or filtration requirements, and use them while you are creating actionable threat intelligence.
 
@@ -71,7 +71,38 @@ Enabling the **Trackable** checkbox makes the following fields available in the 
 
 The time of the creation of feeds at intel source appears under the field *Created at Source*. Similarly, *Modified at Source* shows the time of modification at the intel source.
 
-### Threat Intelligence Workflow 
+### Importing Feeds from Files
+
+1. Enable the option **Ingest Threat Feeds From Files** under **Feed Configurations** > **Ingest Unstructured Threat Feeds** and click **Save**.
+
+> [!NOTE]
+> The Threat Intel Management configuration wizard must be completed.
+
+2. Navigate to **Threat Intel Management** > **Threat Feeds Tab**.
+
+    ![Threat Feeds page](./res/threat-feeds-create-dataset.png)
+
+3. Click the button **Upload Unstructured Feeds**.
+
+    ![Upload unstructured feeds dialog](./res/upload-unstructured-feeds-from-files.png)
+
+4. Under **File to Import**, click to browse and upload the file. Supported file formats are `csv`, `txt`, `pdf`, `eml`, `json`, and `xlsx`.
+
+5. **Confidence**: Specify the confidence score to assign to the ingested unstructured threat feeds.
+
+6. **Reputation**: Select the reputation to assign to the ingested unstructured threat feeds.
+
+7. **TLP**: Select the TLP to assign to the ingested unstructured threat feeds.
+
+8. **Feed Expiry**: Specify the number of days after which the ingested unstructured threat feeds are marked as expired for deletion.
+
+8. **Feed Source**: Specify a value to be updated as *Source* for all ingested unstructured threat feeds.
+
+9. **Tags**: Specify comma-separated values to be assigned as tags to the ingested unstructured threat feeds.
+
+10. Select the option **Automatic Block IOC** to block threat feeds immediately on ingestion. Leave unchecked to manually block threat feeds later.
+
+### Threat Intelligence Workflow
 
 The **Threat Intelligence** tab is the cornerstone of the TIM solution, as threat feeds alone can often prove to be a burden on the threat intelligence team and analysts when there is no clear picture of what to consume and what to leave. On the Threat Intelligence tab, you can create and consume actionable and contextual threat intelligence:  
 
@@ -146,7 +177,8 @@ As soon as you enable the TAXII server, the following details appear under **TAX
 
 **Available Datasets**: The `Available Datasets` section, contains a list of all datasets of the Threat Intel Feeds module. You can click the **JSON** or **CSV** icons to export the threat feeds in the JSON format or the CSV format respectively. You can use the exported threat feeds for consumption in other use cases.
 
->**NOTE**: You need **FortiSOAR release 7.2.2 or later** to export the threat feeds in the CSV format.
+>[!NOTE]
+>You need **FortiSOAR release 7.2.2 or later** to export the threat feeds in the CSV format.
 
 Apart from this, you can also use standard ways to export a CSV file so that other tools can import and use the filtered threat intelligence data.
 

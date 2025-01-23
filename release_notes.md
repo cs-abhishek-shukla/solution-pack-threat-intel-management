@@ -1,6 +1,6 @@
 # What's New
 
-## Simplified Setup with the Configuration Wizard
+### Simplified Setup with the Configuration Wizard
 
 Effortlessly set up your Threat Intel Management system with our new **Configuration Wizard**. This step-by-step guide ensures an intuitive and smooth setup experience by breaking tasks into manageable stages:
 - **Feed Source Selection**: Easily choose the feed sources most relevant to your needs.
@@ -29,7 +29,7 @@ This new navigation experience brings everything you need into a unified, intuit
     - *Feed Sources* - Find, Install, and Configure new feed connectors through Content Hub.
     - *TAXII Server* - Configure a TAXII Server to generate an outgoing feed to share threat intelligence externally.
     - *Threat Feed Rules* - Configure threat feed to manage threat intelligence from various sources.
-
+- The **Workspace** now carries a description field to better communicate the purpose of setting up a workspace
 Stay aligned with industry standards while managing your threat feeds seamlessly.
 
 ---
@@ -43,6 +43,20 @@ Managing threat data just got easier with these powerful updates:
 - **Threat Feed Rules**: New rules help streamline threat feed management:
     - **Link Threat Feed to Indicators**: (Earlier *Feed to Indicator Linking*) Updates the indicator reputation as per the matching feed.
     - **Ingest Unstructured Threat Feeds**: Ingests unstructured feeds from files or email attachments
+- Following are added for *MITRE&reg;* connector during installation:
+    - A default configuration
+    - Data ingestion playbooks
+    - An ingestion schedule
+- Following are removed for *Fortinet FortiGuard Threat Intelligence* during installation
+    - Data ingestion playbooks
+    - An ingestion schedule
+
+    These are created by the configuration wizard later. 
+
+- The configuration wizard creates the following datasets and triggers the *MITRE&reg;* integration's data ingestion:
+    - FortiGuard Outbreak Threat Feeds
+    - FortiGuard Threat Intel Feeds
+    - Phishing Threat Feeds
 
 These features enable seamless handling of diverse data formats and automated configurations, saving time and effort.
 
